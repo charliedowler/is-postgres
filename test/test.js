@@ -1,17 +1,17 @@
 'use strict';
 var assert = require('assert');
 var exec = require('child_process').exec;
-var isMysql = require('../index');
+var isPostgres = require('../index');
 
 it('Should recognise postgres is running - promise', function(done) {
-  isMysql().then(function(db) {
+  isPostgres().then(function(db) {
     assert.equal(db.running, true);
     assert.equal(db.type, 'postgres');
     done();
   });
 });
 it('Should recognise postgres is running - callback', function(done) {
-  isMysql(function(db) {
+  isPostgres(function(db) {
     assert.equal(db.running, true);
     assert.equal(db.type, 'postgres');
     done();
