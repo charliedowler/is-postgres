@@ -20,6 +20,8 @@ it('Should recognise postgres is running - callback', function(done) {
 it('Should return running when run from bash', function(done) {
   exec('node ./bin/is-postgres', function(err, stdout, stderr) {
     assert.equal(/Up/.test(stdout), true);
+  }).on('exit', function(status) {
+    assert.equal(status, 0);
     done();
   });
 });
