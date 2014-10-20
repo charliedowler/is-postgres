@@ -36,13 +36,17 @@ isPostgres().then(function(db) {
 ## CLI
 
 ```sh
-$ npm install -g is-postgres
+$ npm install --global is-postgres
 ```
 
 ```sh
 $ is-postgres
 #=> Up
 ```
+
+## Release History
+ * 2014-10-20    v0.2.0    Cross platform support
+ * 2014-08-31    v0.1.0    Initial release
 
 
 ## License
